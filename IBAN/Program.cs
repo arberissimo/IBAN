@@ -12,7 +12,7 @@ namespace IBAN
         {
             Console.WriteLine("IBAN-Check");
 
-            Console.WriteLine("\nWählen Sie bitte Ihr gewünsten Bereich: ");
+            Console.WriteLine("\nWählen Sie bitte Ihr gewünschten Bereich: ");
             Console.WriteLine("\n[a] IBAN-Nummer prüfen");
             Console.WriteLine("[b] Was ist IBAN?");
 
@@ -21,20 +21,19 @@ namespace IBAN
             switch(hauptmenu)
             {
                 case "a":
-                    Console.Clear();
-                    Console.WriteLine("\nGeben Sie Ihre IBAN-Nummer an:");
-                    Console.ReadLine();
+                    var helper = new ConsoleHelper();
+                    helper.input();
                     break;
 
                 case "b":
                     Console.Clear();
                     Console.WriteLine("Die IBAN ist die Nummer, die Sie auf Ihrer Bankkarte finden.");
                     Console.WriteLine("Beispiel: CH31 8123 9000 0012 4568 9");
-                    Console.Clear();
-                    return;
+                    Console.WriteLine("\nFür mehr Infos gehen Sie auf www.moneytoday.ch.");
+                    Run();
+                    break;
             }
 
-            ConsoleHelper.input();
         }
      }
   }
